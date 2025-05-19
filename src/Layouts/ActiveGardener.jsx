@@ -1,12 +1,28 @@
-import React from 'react';
+
+
+import React, { useEffect, useState } from 'react';
+import GardenerCard from '../Components/GardenerCard';
 
 const ActiveGardener = () => {
-    return (
-        <div>
-            <h1 className='text-3xl font-semibold mt-12'>Active Gardener</h1>
-            
-        </div>
-    );
+  const [activeGardeners, setActiveGardeners] = useState([]);
+
+  useEffect(() => {
+    fetch('/gardeners.json')
+      .then(res => res.json())
+      .then(data => {
+        const active = data.gardeners.filter(gardener => gardener.activity === "yes");
+        setActiveGardeners(active);
+      });
+  }, []);
+
+  return (
+    <div>
+      <h1>Active Gardeners</h1>
+      {activeGardeners.map(gardener => (
+        <GardenerCard key={gardener.id} singleGardener={gardener} />
+      ))}
+    </div>
+  );
 };
 
 export default ActiveGardener;

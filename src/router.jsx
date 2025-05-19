@@ -11,7 +11,13 @@ const router = createBrowserRouter([
     Component: MainLayout,
      errorElement: <ErrorPage></ErrorPage>,
      children:[
-        
+    {
+        // path: '/',
+        // loader:()=>fetch('/gardeners.json'),
+        // Component: ActiveGardener
+
+    }
+
       
     ]
   },

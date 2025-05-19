@@ -1,0 +1,84 @@
+{
+  "gardeners": [
+    {
+      "id": 1,
+      "name": "Emma Greenfield",
+      "photo": "https://example.com/gardeners/emma.jpg",
+      "activity": "yes",
+      "age": 32,
+      "favorite_plant": "Sunflower"
+    },
+    {
+      "id": 2,
+      "name": "Liam Thornbrook",
+      "photo": "https://example.com/gardeners/liam.jpg",
+      "activity": "yes",
+      "age": 45,
+      "favorite_plant": "Tomato"
+    },
+    {
+      "id": 3,
+      "name": "Olivia Rosewood",
+      "photo": "https://example.com/gardeners/olivia.jpg",
+      "activity": "yes",
+      "age": 28,
+      "favorite_plant": "Lavender"
+    },
+    {
+      "id": 4,
+      "name": "Noah Leaford",
+      "photo": "https://example.com/gardeners/noah.jpg",
+      "activity": "yes",
+      "age": 50,
+      "favorite_plant": "Basil"
+    },
+    {
+      "id": 5,
+      "name": "Ava Petal",
+      "photo": "https://example.com/gardeners/ava.jpg",
+      "activity": "yes",
+      "age": 36,
+      "favorite_plant": "Rose"
+    },
+    {
+      "id": 6,
+      "name": "Ethan Bloom",
+      "photo": "https://example.com/gardeners/ethan.jpg",
+      "activity": "yes",
+      "age": 40,
+      "favorite_plant": "Cactus"
+    },
+    {
+      "id": 7,
+      "name": "Sophia Fern",
+      "photo": "https://example.com/gardeners/sophia.jpg",
+      "activity": "no",
+      "age": 29,
+      "favorite_plant": "Mint"
+    },
+    {
+      "id": 8,
+      "name": "James Shrub",
+      "photo": "https://example.com/gardeners/james.jpg",
+      "activity": "no",
+      "age": 55,
+      "favorite_plant": "Aloe Vera"
+    },
+    {
+      "id": 9,
+      "name": "Isla Daisy",
+      "photo": "https://example.com/gardeners/isla.jpg",
+      "activity": "no",
+      "age": 42,
+      "favorite_plant": "Tulip"
+    },
+    {
+      "id": 10,
+      "name": "Moss Reed",
+      "photo": "https://example.com/gardeners/moss.jpg",
+      "activity": "no",
+      "age": 38,
+      "favorite_plant": "Bamboo"
+    }
+  ]
+}
