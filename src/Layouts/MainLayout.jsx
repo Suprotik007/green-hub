@@ -5,6 +5,7 @@ import Footer from '../Components/Footer';
 import Banner from '../Components/banner';
 import ActiveGardener from './ActiveGardener';
 import TrendingTips from './TrendingTips';
+import Faq from './Faq';
 
 const MainLayout = () => {
     return (
@@ -17,7 +18,7 @@ const MainLayout = () => {
             <main className=' '>
                 <ActiveGardener></ActiveGardener>
                 <TrendingTips></TrendingTips>
-
+                 <Faq></Faq>
             </main>
             
             <div className=''>
