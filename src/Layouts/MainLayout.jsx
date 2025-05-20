@@ -6,6 +6,7 @@ import Banner from '../Components/banner';
 import ActiveGardener from './ActiveGardener';
 import TrendingTips from './TrendingTips';
 import Faq from './Faq';
+import Stats from './Stats';
 
 const MainLayout = () => {
     return (
@@ -19,6 +20,7 @@ const MainLayout = () => {
                 <ActiveGardener></ActiveGardener>
                 <TrendingTips></TrendingTips>
                  <Faq></Faq>
+                 <Stats></Stats>
             </main>
             
             <div className=''>

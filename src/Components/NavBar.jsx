@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
 import userImg from '../assets/user.png'
-// import { AuthContext } from '../provider/AuthProvider';
+
 import { ToastContainer, toast } from 'react-toastify';
+import { AuthContext } from '../provider/Authprovider';
+import { use } from 'react';
 
 const Navbar = () => {
   const handleLogOut=()=>{
@@ -14,7 +16,7 @@ const Navbar = () => {
     });
     
   }
-//   const {user,logOut}=use(AuthContext)
+  const {user,logOut}=use(AuthContext)
   
     const links=(
         
@@ -34,6 +36,14 @@ const Navbar = () => {
           }
         >
           Share a Garden Tip 
+        </NavLink>
+        <NavLink
+          to="/plans"
+          className={({ isActive }) =>
+            isActive ? 'text-yellow-400 border-b-2 border-yellow-400' : ''
+          }
+        >
+          Browse Tips
         </NavLink>
         <NavLink
           to="/profile"
@@ -79,14 +89,17 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-3 ">
-  <p className='text-black text-xs sm:block hidden '></p>
-    <img className='w-12 rounded-full ' src={userImg} />
+ 
+    <img className='w-12 rounded-full ' src={`${user ? user.photoURL :userImg}`} alt=""   title={user ? user.displayName : "User"} />
     
-    
-      
+   {
+      user ? (
 <button onClick={handleLogOut} className="btn  hover:text-black btn-outline">Log Out</button>
+      ):
+      (<Link to='/login'><button className="btn  hover:text-black btn-outline">Login</button></Link>)
+    } 
+      
 
-      {/* (<Link to='/auth/login'><button className="btn text-white hover:text-black btn-outline">Login</button></Link>) */}
     
     <ToastContainer />
   </div>
