@@ -7,21 +7,24 @@ const ActiveGardener = () => {
   const [activeGardeners, setActiveGardeners] = useState([]);
 
   useEffect(() => {
-    fetch('/gardeners.json')
+    fetch('http://localhost:3000/gardeners/active')
       .then(res => res.json())
       .then(data => {
-        const active = data.gardeners.filter(gardener => gardener.activity === "yes");
-        setActiveGardeners(active);
+      
+        setActiveGardeners(data);
       });
   }, []);
 
   return (
-    <div>
-      <h1>Active Gardeners</h1>
-      {activeGardeners.map(gardener => (
-        <GardenerCard key={gardener.id} singleGardener={gardener} />
+   <div>
+    <h1 className='text-3xl font-semibold mt-10 mb-5'>Active Gardeners</h1>
+     <div className='grid grid-cols-3'>
+      
+      {activeGardeners.map(singleGardener => (
+        <GardenerCard key={singleGardener.id} singleGardener={singleGardener} />
       ))}
     </div>
+   </div>
   );
 };
 

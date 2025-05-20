@@ -13,11 +13,13 @@ const MainLayout = () => {
 <Banner></Banner>
 
             </header>
-            <main>
+            <main className=''>
                 <ActiveGardener></ActiveGardener>
             </main>
             
-            <Outlet></Outlet>
+            <div className=''>
+                <Outlet></Outlet>
+            </div>
             <footer>
 <Footer></Footer>
             </footer>
