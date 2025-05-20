@@ -90,7 +90,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end gap-3 ">
  
-    <img className='w-12 rounded-full ' src={`${user ? user.photoURL :userImg}`} alt=""   title={user ? user.displayName : "User"} />
+    <img className='w-12 rounded-full ' src={`${user ? user.photoURL :''}`} alt=""   title={user ? user.displayName  : ""} />
     
    {
       user ? (
