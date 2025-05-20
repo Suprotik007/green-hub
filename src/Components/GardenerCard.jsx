@@ -5,8 +5,8 @@ const GardenerCard = ({singleGardener}) => {
     
     return (
         <div className='  '>
-<div className="card text-left bg-green-100 m-5 w-96 shadow-sm">
-  <figure>
+<div className="card  text-left bg-green-100 m-5 w-96 shadow-sm">
+  <figure className='pt-5 '>
     <img
       src={singleGardener.photo}
        />

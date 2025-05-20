@@ -4,6 +4,7 @@ import Navbar from '../Components/NavBar';
 import Footer from '../Components/Footer';
 import Banner from '../Components/banner';
 import ActiveGardener from './ActiveGardener';
+import TrendingTips from './TrendingTips';
 
 const MainLayout = () => {
     return (
@@ -13,8 +14,10 @@ const MainLayout = () => {
 <Banner></Banner>
 
             </header>
-            <main className=''>
+            <main className=' '>
                 <ActiveGardener></ActiveGardener>
+                <TrendingTips></TrendingTips>
+
             </main>
             
             <div className=''>
