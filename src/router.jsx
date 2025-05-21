@@ -5,19 +5,16 @@ import ErrorPage from "./pages/ErrorPage";
 import LoginBox from './pages/LoginBox';
 import RegBox from './pages/RegBox';
 import ShareGardentip from './pages/ShareGardentip';
-import Banner from './Components/banner';
-import ActiveGardener from './Layouts/ActiveGardener';
-import TrendingTips from './Layouts/TrendingTips';
-import Faq from './Layouts/Faq';
-import Stats from './Layouts/Stats';
 import PrivateRoute from './provider/PrivateRoute';
 import BrowseTips from './pages/BrowseTips';
+
 const router = createBrowserRouter([
   {
     
     path: "/",
     Component: MainLayout,
      errorElement: <ErrorPage></ErrorPage>,
+     
    
   },
   {
@@ -36,8 +33,10 @@ const router = createBrowserRouter([
           },
           {
             path:'/browseTips',
+            
             Component:BrowseTips
-          }
+          },
+        
   
 
 ]);
