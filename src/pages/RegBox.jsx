@@ -1,20 +1,16 @@
 
 
-import React, { useEffect, useState, useContext } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router';
+import React, {  useState, useContext } from 'react';
+import { Link,  useNavigate } from 'react-router';
 import { AuthContext } from '../provider/Authprovider';
 import { ToastContainer, toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import Google from '../Components/Google';
+import Navbar from '../Components/NavBar';
 
 const RegBox = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    document.title = ' Registration';  
-  }, [location.pathname]);
-
+  
   const [showPass, setShowPass] = useState(false);
   const { createUser, setUser, updateUser } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -59,10 +55,11 @@ const RegBox = () => {
 
   return (
     <div>
-      <div className="hero my-10 min-h-screen">
-        <div className="card bg-black text-white p-5 rounded-2xl w-full max-w-sm shrink-0 shadow-2xl">
+      <Navbar></Navbar>
+      <div className="hero  min-h-screen">
+        <div className="card bg-black text-teal-400 p-5 rounded-2xl w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
-            <h1 className="text-4xl font-mono mb-10 font-bold text-center">Register now!</h1>
+            <h1 className="text-4xl  mb-10 font-bold text-center">Register!</h1>
             <form onSubmit={handleRegister} className="fieldset">
               <label className="label font-semibold">Name</label>
               <input type="text" required name='name' className="input text-black font-semibold" placeholder="Enter your name" />
@@ -73,9 +70,7 @@ const RegBox = () => {
               <label className="label font-semibold">Password</label>
               <div className='relative'>
                 <input type={showPass ? 'text' : 'password'} required name='password' className="input text-black font-semibold" placeholder="Password" />
-                <button type="button" onClick={() => setShowPass(!showPass)} className='absolute top-3 right-3 bg-black p-1'>
-                  {showPass ? <FaEyeSlash /> : <IoEyeOutline />}
-                </button>
+                
               </div>
               <button type='submit' className="btn btn-info mt-4">Register</button>
               <ToastContainer />
@@ -87,6 +82,7 @@ const RegBox = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

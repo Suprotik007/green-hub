@@ -1,18 +1,15 @@
-import React, { useState, useEffect, use } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router';
+import React, { useState,  use } from 'react';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/Authprovider';
 import { Navigate } from 'react-router';
 import { ToastContainer, toast } from 'react-toastify';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 import {auth} from '../Firebase'
+import Navbar from '../Components/NavBar';
+
 
 const LoginBox = () => {
-  const location = useLocation();
-  
-      useEffect(() => {
-          document.title = ' Login';  
-      }, [location.pathname]);
   
    const provider= new GoogleAuthProvider
       const handleGoogleLogin=()=>{
@@ -28,7 +25,7 @@ const LoginBox = () => {
               
           })}
   const {signIn}=use(AuthContext)
-  // const location =useLocation()
+  
   const navigate=useNavigate()
   const [email, setEmail] = useState('');
   const handleLogin=(e)=>{
@@ -59,12 +56,14 @@ const LoginBox = () => {
 
 
     return (
-        <div>
+      
+        <div className=''>
+  <Navbar></Navbar>
             <div className="hero  min-h-screen">
     
-    <div className="card bg-black text-white  p-5 rounded-2xl w-full max-w-sm shrink-0 shadow-2xl">
+    <div className="card bg-black text-teal-300   p-5 rounded-2xl w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
-      <h1 className="text-4xl font-mono mb-10 font-bold text-center">Login now!</h1>
+      <h1 className="text-4xl  mb-10 font-bold text-center">Login now!</h1>
         <form  onSubmit={handleLogin} className="fieldset">
           <label className="label font-semibold">Email</label>
           <input type="email" required name='email' className="input text-black font-semibold" placeholder="Email"   value={email}
@@ -84,7 +83,9 @@ const LoginBox = () => {
         </form>
       </div>
     </div>
+    
   </div>
+  
 </div>
     );
 };
