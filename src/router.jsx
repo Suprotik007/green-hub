@@ -4,28 +4,35 @@ import MainLayout from "./Layouts/MainLayout";
 import ErrorPage from "./pages/ErrorPage";
 import LoginBox from './pages/LoginBox';
 import RegBox from './pages/RegBox';
+import ShareGardentip from './pages/ShareGardentip';
+import Banner from './Components/banner';
+import ActiveGardener from './Layouts/ActiveGardener';
+import TrendingTips from './Layouts/TrendingTips';
+import Faq from './Layouts/Faq';
+import Stats from './Layouts/Stats';
+import PrivateRoute from './provider/PrivateRoute';
 const router = createBrowserRouter([
   {
     
     path: "/",
     Component: MainLayout,
      errorElement: <ErrorPage></ErrorPage>,
-     children:[
-    
-
-      
-    ]
-
-    
+   
   },
   {
             path:'/login',
-           element: <LoginBox></LoginBox>
+          Component: LoginBox
           },
           {
             path:'/reg',
-          element: <RegBox></RegBox>
+          Component: RegBox
           },
+          {
+            path :'/shareTips',
+           element: <PrivateRoute>
+            <ShareGardentip></ShareGardentip>
+           </PrivateRoute>
+          }
   
 
 ]);

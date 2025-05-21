@@ -43,33 +43,33 @@ const Navbar = () => {
           Home
         </NavLink>
         <NavLink
-          to="/plans"
+          to="/shareTips"
           className={({ isActive }) =>
-            isActive ? 'text-yellow-400 border-b-2 border-yellow-400' : ''
+            isActive ? 'text-green-800 border-b-2 border-green-900' : ''
           }
         >
           Share a Garden Tip 
         </NavLink>
         <NavLink
-          to="/plans"
+          to="/browseTips"
           className={({ isActive }) =>
-            isActive ? 'text-yellow-400 border-b-2 border-yellow-400' : ''
+            isActive ? 'text-green-800 border-b-2 border-green-900' : ''
           }
         >
           Browse Tips
         </NavLink>
         <NavLink
-          to="/profile"
+          to="/explore"
           className={({ isActive }) =>
-            isActive ? 'text-yellow-400 border-b-2 border-yellow-400' : ''
+            isActive ? 'text-green-800 border-b-2 border-green-900' : ''
           }
         >
           Explore Gardener
         </NavLink>
         <NavLink
-          to="/profile"
+          to="/myTips"
           className={({ isActive }) =>
-            isActive ? 'text-yellow-400 border-b-2 border-yellow-400' : ''
+            isActive ? 'text-green-800 border-b-2 border-green-900' : ''
           }
         >
           My Tips
