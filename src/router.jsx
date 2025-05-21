@@ -11,6 +11,7 @@ import TrendingTips from './Layouts/TrendingTips';
 import Faq from './Layouts/Faq';
 import Stats from './Layouts/Stats';
 import PrivateRoute from './provider/PrivateRoute';
+import BrowseTips from './pages/BrowseTips';
 const router = createBrowserRouter([
   {
     
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
            element: <PrivateRoute>
             <ShareGardentip></ShareGardentip>
            </PrivateRoute>
+          },
+          {
+            path:'/browseTips',
+            Component:BrowseTips
           }
   
 
