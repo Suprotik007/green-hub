@@ -42,7 +42,7 @@ const Google = () => {
         
     return (
         <div className=' '>
-            <button  onClick={handleGoogleReg} className="btn bg-red-500 text-white w-full max-w-sm shrink-0  ">
+            <button  onClick={handleGoogleReg} className="btn bg-black text-white w-full max-w-sm shrink-0  ">
  
  Register with Google
 </button> <ToastContainer />

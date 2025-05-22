@@ -16,7 +16,7 @@ const ActiveGardener = () => {
   }, []);
 
   return (
-   <div>
+   <div className='w-12/12 mx-auto gap-8'>
     <h1 className='text-3xl text-center font-semibold mt-10 border-b-2 pb-5  w-4/12 mx-auto mb-5'>Active Gardeners</h1>
      <div className='grid grid-cols-3 w-11/12 mx-auto pt-8 '>
       

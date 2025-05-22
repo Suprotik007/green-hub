@@ -2,11 +2,11 @@ import React from 'react';
 
 const Stats = () => {
     return (
-        <div className='w-6/12 mx-auto my-10'>
-            <h1 className='text-3xl font-semibold text-center border-b-2 pb-6'>Statistics </h1>
-            <div className='pt-6 '>
-                <div className="stats shadow">
-  <div className="stat">
+        <div className='w-[70%] mx-auto my-10'>
+            <h1 className='text-3xl w-6/12 mx-auto font-semibold text-center border-b-2 pb-6'>Statistics </h1>
+            <div className='pt-6  '>
+                <div className="stats  mx-aut0 bg-base-300 shadow">
+  <div className="stat ">
     <div className="stat-figure text-primary">
       <svg
         xmlns="http://www.w3.org/2000/svg"

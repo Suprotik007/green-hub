@@ -8,7 +8,7 @@ const BrowseTips = () => {
   const [tips, setTips] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/shareTips')  // Replace with your actual API URL
+    fetch('http://localhost:3000/shareTips')  
       .then(res => res.json())
       .then(data => setTips(data))
       .catch(err => console.error('Failed to fetch tips:', err));
@@ -28,15 +28,15 @@ const BrowseTips = () => {
 <ul className="list bg-base-100   rounded-box  pt-10">
   {tips.length === 0 && <p>Loading tips...</p>}
   {
-              publicTips.map((tip,index)=><li className="list-row border-3 mb-5">
-    <div className="text-3xl font-thin opacity-80 tabular-nums text-teal-500">{String(index+1)})</div>
+              publicTips.map((tip,index)=><li  key={tip._id}className="list-row border-3 mb-5">
+    <div className="text-3xl font-thin opacity-80 tabular-nums text-green-800">{String(index+1)})</div>
     <div><img className="size-11 rounded-box " src={tip.imagesUrl}/></div>
     <div className="list-col-grow">
       <div className='font-semibold text-xl'>{tip.title}</div>
       <div className="text-xs  uppercase font-semibold opacity-60">{tip.category}</div>
     </div>
     <Link to={`/tipDetails/${tip._id}`}><button className="btn btn-outline hover:bg-green-900 hover:text-white btn-ghost">
-      see More
+      See More
     </button></Link>
   </li>
    )

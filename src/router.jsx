@@ -7,6 +7,8 @@ import RegBox from './pages/RegBox';
 import ShareGardentip from './pages/ShareGardentip';
 import PrivateRoute from './provider/PrivateRoute';
 import BrowseTips from './pages/BrowseTips';
+import TipDetails from './pages/TipDetails';
+import MyTips from './pages/MyTips';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,18 @@ const router = createBrowserRouter([
             
             Component:BrowseTips
           },
-        
+        {
+          path:'/tipDetails/:_id',
+          element: <PrivateRoute>
+            <TipDetails></TipDetails>
+           </PrivateRoute>
+        },
+        {
+          path:'/myTips',
+          element: <PrivateRoute> 
+            <MyTips></MyTips>
+           </PrivateRoute>
+        }
   
 
 ]);

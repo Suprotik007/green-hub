@@ -56,27 +56,27 @@ const RegBox = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="hero  min-h-screen">
-        <div className="card bg-black text-teal-400 p-5 rounded-2xl w-full max-w-sm shrink-0 shadow-2xl">
+      <div className="hero   min-h-screen">
+        <div className="card border-2 border-green-800 my-10 text-green-800 p-5 bg-base-300 rounded-2xl w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
-            <h1 className="text-4xl  mb-10 font-bold text-center">Register!</h1>
+            <h1 className="text-4xl text-green-800  mb-10 font-bold text-center">Register!</h1>
             <form onSubmit={handleRegister} className="fieldset">
               <label className="label font-semibold">Name</label>
-              <input type="text" required name='name' className="input text-black font-semibold" placeholder="Enter your name" />
-              <label className="label font-semibold">Photo URL</label> 
-              <input type="text" required name='photo' className="input text-black font-semibold" placeholder="Photo URL" />
+              <input type="text" required name='name' className="input text-black border-2 border-green-800   font-semibold" placeholder="Enter your name" />
+              <label className="label  font-semibold">Photo URL</label> 
+              <input type="text" required name='photo' className="input text-black border-2 border-green-800  font-semibold" placeholder="Photo URL" />
               <label className="label font-semibold">Email</label>
-              <input type="email" required name='email' className="input text-black font-semibold" placeholder="Email" />
+              <input type="email" required name='email' className="input text-black border-2 border-green-800  font-semibold" placeholder="Email" />
               <label className="label font-semibold">Password</label>
               <div className='relative'>
-                <input type={showPass ? 'text' : 'password'} required name='password' className="input text-black font-semibold" placeholder="Password" />
+                <input type={showPass ? 'text' : 'password'} required name='password' className="input text-black border-2 border-green-800  font-semibold" placeholder="Password" />
                 
               </div>
-              <button type='submit' className="btn btn-info mt-4">Register</button>
+              <button type='submit' className="btn btn-accent mt-4">Register</button>
               <ToastContainer />
               <Google />
               <p className='font-semibold text-center mt-3'>
-                Already Have An Account? <Link to='/login'><span className='text-yellow-400 font-semibold'>Login</span></Link>
+                Already Have An Account? <Link to='/login'><span className='text-blue-500 font-semibold'>Login</span></Link>
               </p>
             </form>
           </div>
