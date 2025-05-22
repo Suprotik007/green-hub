@@ -42,6 +42,14 @@ const Navbar = () => {
         >
           Home
         </NavLink>
+         <NavLink
+          to="/explore"
+          className={({ isActive }) =>
+            isActive ? 'text-green-800 border-b-2 border-green-900' : ''
+          }
+        >
+          Explore Gardener
+        </NavLink>
         <NavLink
           to="/shareTips"
           className={({ isActive }) =>
@@ -58,14 +66,7 @@ const Navbar = () => {
         >
           Browse Tips
         </NavLink>
-        <NavLink
-          to="/explore"
-          className={({ isActive }) =>
-            isActive ? 'text-green-800 border-b-2 border-green-900' : ''
-          }
-        >
-          Explore Gardener
-        </NavLink>
+       
         <NavLink
           to="/myTips"
           className={({ isActive }) =>
@@ -78,7 +79,7 @@ const Navbar = () => {
   )
 
   return (
-    <div className="navbar rounded-xl px-5 mt-2 bg-green-100 shadow-sm w-11/12 mx-auto">
+    <div className="navbar rounded-xl px-5 mt-2 bg-green-200 shadow-sm w-11/12 mx-auto">
       <div className="navbar-start">
    <div className="dropdown">
     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

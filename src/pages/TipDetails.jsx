@@ -49,11 +49,11 @@ const TipDetails = () => {
                 </h1>
 
                 <div className='mt-10 w-9/12 mx-auto'>
-                    <div className="card card-side  border-2 bg-amber-200 shadow-sm">
+                    <div className="card card-side rounded-2xl  border-3  border-green-800 bg-amber-20 shadow-sm">
                         <figure>
                             <img 
                                 src={tip.imagesUrl }
-                                className="w-64 h-64 object-cover"
+                                className=" rounded-xl object-cover"
                             />
                         </figure>
                         <div className="card-body">

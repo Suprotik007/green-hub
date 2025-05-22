@@ -10,6 +10,7 @@ import BrowseTips from './pages/BrowseTips';
 import TipDetails from './pages/TipDetails';
 import MyTips from './pages/MyTips';
 import EditTip from './pages/EditTip';
+import AllGardeners from './pages/AllGardeners';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
             <EditTip></EditTip>
            </PrivateRoute>
         },
+        {
+          path: '/explore',
+          Component: AllGardeners
+        }
   
 
 ]);
