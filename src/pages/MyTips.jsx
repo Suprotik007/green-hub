@@ -72,7 +72,7 @@ Swal.fire({
       <div className='font-semibold text-xl'>{tip.title}</div>
       <div className="text-xs   uppercase font-semibold opacity-90">{tip.category}</div>
     </div>
-    <Link to={`/updateTip/${tip._id}`}><button className="btn btn-outline hover:bg-green-500 text-black  btn-accent border-2">
+    <Link to={`/editTip/${tip._id}`}><button className="btn btn-outline hover:bg-green-500 text-black  btn-accent border-2">
       <MdModeEdit />
     </button></Link>
     <button onClick={()=>handleDelete(tip._id)} className="btn btn-error border-2 btn-outline hover:bg-red-400  text-black ">

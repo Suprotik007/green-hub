@@ -9,6 +9,7 @@ import PrivateRoute from './provider/PrivateRoute';
 import BrowseTips from './pages/BrowseTips';
 import TipDetails from './pages/TipDetails';
 import MyTips from './pages/MyTips';
+import EditTip from './pages/EditTip';
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,14 @@ const router = createBrowserRouter([
           element: <PrivateRoute> 
             <MyTips></MyTips>
            </PrivateRoute>
-        }
+        },
+        {
+          path:'/editTip/:id',
+          loader:({params})=>fetch(`http://localhost:3000/shareTips/${params.id}`),
+          element: <PrivateRoute> 
+            <EditTip></EditTip>
+           </PrivateRoute>
+        },
   
 
 ]);
