@@ -4,11 +4,13 @@ import Navbar from '../Components/NavBar';
 import Footer from '../Components/Footer';
 import { useParams } from 'react-router'; 
 import { Typewriter } from 'react-simple-typewriter';
+import { BiSolidLike } from "react-icons/bi";
 
 const TipDetails = () => {
     const { _id } = useParams(); 
     const [tip, setTip] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [likeLoading, setLikeLoading] = useState(false);
 
 
     useEffect(() => {
@@ -20,13 +22,26 @@ const TipDetails = () => {
       setTip(data);
       setLoading(false);
     })
-    // .catch(error => {
-    //   console.error('Failed to fetch tip details:', error);
-    //   setLoading(false);
-    // });
+    
 }, [_id]);
+const handleLike = () => {
+  if (likeLoading) return;
 
-  
+  setTip(prevTip => ({ ...prevTip, totalLiked: (prevTip.totalLiked || 0) + 1 }));
+
+  fetch(`http://localhost:3000/shareTips/${_id}/like`, {
+    method: 'PATCH',
+  })
+  .then(res => {
+    if (!res.ok) throw new Error('Failed to update like');
+    return res.json();
+  })
+  .then(updatedTip => {
+    setTip(updatedTip); 
+  })
+
+};
+
    
 
     if (!tip) {
@@ -73,7 +88,14 @@ const TipDetails = () => {
                             <p className='font-semibold  text-purple-800'>Description : {tip.description}</p>
                         
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Like</button>
+                                <button 
+                                  className="btn btn-primary flex items-center gap-2"
+                                  onClick={handleLike}
+                                //   disabled={likeLoading}
+                                >
+                                  <BiSolidLike />  <span>{tip.totalLiked || 0} </span>
+                                </button>
+                                
                             </div>
                         </div>
                     </div>

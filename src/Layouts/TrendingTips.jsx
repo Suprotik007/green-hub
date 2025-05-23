@@ -4,14 +4,14 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const TrendingTips = () => {
 
-    const [trendingTips, setTrendingTips] = useState([]);
+    const [tips, setTips] = useState([]);
     
       useEffect(() => {
-        fetch('http://localhost:3000/gardeners/tips')
+        fetch('http://localhost:3000/shareTips')
           .then(res => res.json())
           .then(data => {
           
-            setTrendingTips(data);
+            setTips(data);
           });
       }, []);
     return (
@@ -26,9 +26,10 @@ const TrendingTips = () => {
           delaySpeed={1000}
         /></h1>
             <div>
+            
             <div className='grid grid-cols-3  pt-8 w-11/12 mx-auto'>
       
-      {trendingTips.map(singleTip => (
+      {tips.map(singleTip => (
         <TipsCard key={singleTip._id} singleTip={singleTip} />
       ))}
     </div>
