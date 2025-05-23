@@ -54,7 +54,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/editTip/:id',
-          loader:({params})=>fetch(`http://localhost:3000/shareTips/${params.id}`),
+          loader:({params})=>fetch(`https://graden-explorer-server.vercel.app/shareTips/${params.id}`),
           element: <PrivateRoute> 
             <EditTip></EditTip>
            </PrivateRoute>

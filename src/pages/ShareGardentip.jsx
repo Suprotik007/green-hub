@@ -36,21 +36,21 @@ const ShareGardentip = () => {
       createdAt: new Date().toISOString(),
     };
 
-    // TODO: Replace with your API call or database logic
-    fetch('http://localhost:3000/shareTips',{
+    
+    fetch('https://graden-explorer-server.vercel.app/shareTips',{
         method:"POST",
-        headers:{
+        headers:{ 
             'Content-Type':'application/json'
         },
         body: JSON.stringify(tipData)
     })
     .then(res=>res.json())
-    .then(data=>console.log('after adding tip to db',data)
-    )
-    console.log('Submitting tip:', tipData);
-    toast.success('Garden tip submitted successfully!');
+    // .then(data=>
+      // console.log('after adding tip to db',data))
+    // console.log('Submitting tip:', tipData);
+    toast.success('Garden tip submitted successfully!')
 
-    // Reset form (optional)
+    
     setFormData({
       title: '',
       plantType: '',
@@ -113,9 +113,9 @@ const ShareGardentip = () => {
             onChange={handleChange}
             className="w-full border-2 border-green-800  rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
           >
-            <option>Easy</option>
-            <option>Medium</option>
-            <option>Hard</option>
+            <option className='text-green-800'>Easy</option>
+            <option className='text-green-800'>Medium</option>
+            <option className='text-green-800'>Hard</option>
           </select>
         </div>
 
@@ -162,20 +162,20 @@ const ShareGardentip = () => {
             name="category"
             value={formData.category}
             onChange={handleChange}
-            className="w-full border-2 border-green-800 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full border-2 border-green-800 rounded px-3 py-2  focus:outline-none focus:ring-2 focus:ring-green-400"
           >
-            <option>Composting</option>
-            <option>Plant Care</option>
-            <option>Vertical Gardening</option>
-            <option>Indoor Gardening</option>
-            <option>Organic Gardening</option>
-            <option>Hydroponics</option>
+            <option className='text-green-800'>Composting</option>
+            <option className='text-green-800'>Plant Care</option>
+            <option className='text-green-800'>Vertical Gardening</option>
+            <option className='text-green-800'>Indoor Gardening</option>
+            <option className='text-green-800'>Organic Gardening</option>
+            <option className='text-green-800'>Hydroponics</option>
           </select>
         </div>
 
         
         <div>
-          <label htmlFor="availability" className="block font-semibold mb-1">
+          <label htmlFor="availability" className="block font-semibold  mb-1">
             Availability
           </label>
           <select
@@ -183,10 +183,10 @@ const ShareGardentip = () => {
             name="availability"
             value={formData.availability}
             onChange={handleChange}
-            className="w-full border-2 border-green-800 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full border-2 border-green-800 rounded px-3 py-2  focus:outline-none focus:ring-2 focus:ring-green-400"
           >
-            <option>Public</option>
-            <option>Hidden</option>
+            <option className='text-green-800'>Public</option>
+            <option className='text-green-800'>Hidden</option>
           </select>
         </div>
 
@@ -201,7 +201,7 @@ const ShareGardentip = () => {
               name="userName"
               value={user?.displayName || ''}
               readOnly
-              className="w-full border-2 border-green-800 rounded px-3 py-2 bg-gray-100 "
+              className="w-full border-2 border-green-800 text-green-800 rounded px-3 py-2 bg-gray-100 "
             />
           </div>
           <div>
@@ -214,7 +214,7 @@ const ShareGardentip = () => {
               name="userEmail"
               value={user?.email || ''}
               readOnly
-              className="w-full border-2 border-green-800 rounded px-3 py-2 bg-gray-100 "
+              className="w-full border-2 border-green-800 text-green-800 rounded px-3 py-2 bg-gray-100 "
             />
           </div>
         </div>

@@ -6,7 +6,7 @@ const TipsCard = ({singleTip}) => {
         <div className="card  bg-base-300 border-2 border-dashed   shadow-sm">
   
   <div className="card bg-base-200  shadow-sm">
-  <figure className="px-10 pt-10">
+  <figure className="pt-5">
     <img
       src={singleTip.imagesUrl}
       className="rounded-xl" />

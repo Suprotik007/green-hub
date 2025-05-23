@@ -7,7 +7,7 @@ const ActiveGardener = () => {
   const [activeGardeners, setActiveGardeners] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/gardeners/active')
+    fetch('https://graden-explorer-server.vercel.app/gardeners/active')
       .then(res => res.json())
       .then(data => {
       

@@ -7,7 +7,7 @@ const TrendingTips = () => {
     const [tips, setTips] = useState([]);
     
       useEffect(() => {
-        fetch('http://localhost:3000/shareTips')
+        fetch('https://graden-explorer-server.vercel.app/shareTips')
           .then(res => res.json())
           .then(data => {
           

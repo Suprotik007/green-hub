@@ -21,7 +21,7 @@ const LoginBox = () => {
               navigate(location.state ? location.state : '/');
           })
           .catch(error=>{
-              console.log(error);
+              // console.log(error);
               
           })}
   const {signIn}=use(AuthContext)
@@ -38,7 +38,7 @@ const LoginBox = () => {
     signIn(email,password)
     .then((result)=>{
       const user=result.user
-      console.log(user);
+      // console.log(user);
       toast.success('Login Successful')
       setTimeout(() => {
         navigate(location.state ? location.state : '/');

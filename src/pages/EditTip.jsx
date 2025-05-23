@@ -3,11 +3,12 @@ import { AuthContext } from '../provider/Authprovider';
 import { toast } from 'react-toastify';
 import Navbar from '../Components/NavBar';
 import Footer from '../Components/Footer';
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useParams } from 'react-router';
 import Swal from 'sweetalert2';
 
 
 const EditTip = () => {
+  // const {_id}=useParams()
     const { user } = useContext(AuthContext);
     const {_id,title,plantType,difficulty,description,imagesUrl,category,availability}=useLoaderData()
     // console.log(updateTip);
@@ -34,9 +35,9 @@ const EditTip = () => {
         const form =e.target
     const formData=new FormData(form)
     const updatedTip=Object.fromEntries(formData.entries())
-    console.log(updatedTip);
+    // console.log(updatedTip);
     
-    fetch(`http://localhost:3000/shareTips/${_id}`,{
+    fetch(`https://graden-explorer-server.vercel.app/shareTips/${_id}`,{
         method: 'PUT',
         headers: {
             'content-type' : 'application/json'
@@ -114,9 +115,9 @@ const EditTip = () => {
             onChange={handleChange}
             className="w-full border-2 border-green-800  rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
           >
-            <option>Easy</option>
-            <option>Medium</option>
-            <option>Hard</option>
+             <option className='text-green-800'>Easy</option>
+            <option className='text-green-800'>Medium</option>
+            <option className='text-green-800'>Hard</option>
           </select>
         </div>
 
@@ -165,12 +166,12 @@ const EditTip = () => {
             onChange={handleChange}
             className="w-full border-2 border-green-800 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
           >
-            <option>Composting</option>
-            <option>Plant Care</option>
-            <option>Vertical Gardening</option>
-            <option>Indoor Gardening</option>
-            <option>Organic Gardening</option>
-            <option>Hydroponics</option>
+           <option className='text-green-800'>Composting</option>
+            <option className='text-green-800'>Plant Care</option>
+            <option className='text-green-800'>Vertical Gardening</option>
+            <option className='text-green-800'>Indoor Gardening</option>
+            <option className='text-green-800'>Organic Gardening</option>
+            <option className='text-green-800'>Hydroponics</option>
           </select>
         </div>
 
@@ -186,8 +187,8 @@ const EditTip = () => {
             onChange={handleChange}
             className="w-full border-2 border-green-800 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
           >
-            <option>Public</option>
-            <option>Hidden</option>
+              <option className='text-green-800'>Public</option>
+            <option className='text-green-800'>Hidden</option>
           </select>
         </div>
 
@@ -233,7 +234,7 @@ const EditTip = () => {
     </div>
     <Footer></Footer>
    </div>
-  );
+  
             </div>
         </div>
     );

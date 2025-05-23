@@ -11,14 +11,14 @@ const MyTips = () => {
 // const {_id}=useParams()
 
   useEffect(() => {
-    fetch('http://localhost:3000/shareTips')  
+    fetch('https://graden-explorer-server.vercel.app/shareTips')  
       .then(res => res.json())
       .then(data => setTips(data))
       .catch(err => console.error('Failed to fetch tips:', err));
   }, []);
 
 const handleDelete=(_id)=>{
-console.log(_id);
+// console.log(_id);
 Swal.fire({
   title: "Are you sure?",
   text: "You won't be able to revert this!",
@@ -28,17 +28,17 @@ Swal.fire({
   cancelButtonColor: "#d33",
   confirmButtonText: "Yes, delete it!"
 }).then((result) => {
-    console.log(result.isConfirmed);
+    // console.log(result.isConfirmed);
     
   if (result.isConfirmed) {
-    fetch(`http://localhost:3000/shareTips/${_id}`,{
+    fetch(`https://graden-explorer-server.vercel.app/shareTips/${_id}`,{
         method:'DELETE',
         // 'Content-Type' : 'application/json',
 
     })
     .then(res=>res.json())
     .then(data=>{
-        console.log('after delete',data);
+        // console.log('after delete',data);
         if(data.deletedCount){
             setTips(prevTips => prevTips.filter(tip => tip._id !== _id));
 Swal.fire({

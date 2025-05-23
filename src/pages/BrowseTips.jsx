@@ -10,10 +10,10 @@ const BrowseTips = () => {
   const [filter, setFilter] = useState('All'); 
 
   useEffect(() => {
-    fetch('http://localhost:3000/shareTips')
+    fetch('https://graden-explorer-server.vercel.app/shareTips')
       .then(res => res.json())
       .then(data => setTips(data))
-      .catch(err => console.error('Failed to fetch tips:', err));
+      // .catch(err => console.error('Failed to fetch tips:', err));
   }, []);
   const publicTips = tips.filter(tip => tip.availability === 'Public');
 

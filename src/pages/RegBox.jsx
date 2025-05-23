@@ -31,7 +31,7 @@ const RegBox = () => {
       return; 
     }
 
-    console.log({ name, photo, email, password });
+    // console.log({ name, photo, email, password });
 
     createUser(email, password)
       .then(result => {
@@ -42,13 +42,13 @@ const RegBox = () => {
             navigate('/');
           })
           .catch(error => {
-            console.error('Update user error:', error);
+            // console.error('Update user error:', error);
             setUser(user);
           });
         toast.success('Registration successful');
       })
       .catch(error => {
-        console.error('Create user error:', error);
+        // console.error('Create user error:', error);
         toast.error(error.message);
       });
   };

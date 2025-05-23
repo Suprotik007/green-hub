@@ -14,10 +14,10 @@ const TipDetails = () => {
 
 
     useEffect(() => {
-  fetch(`http://localhost:3000/shareTips/${_id}`) 
+  fetch(`https://graden-explorer-server.vercel.app/shareTips/${_id}`) 
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       
       setTip(data);
       setLoading(false);
@@ -29,7 +29,7 @@ const handleLike = () => {
 
   setTip(prevTip => ({ ...prevTip, totalLiked: (prevTip.totalLiked || 0) + 1 }));
 
-  fetch(`http://localhost:3000/shareTips/${_id}/like`, {
+  fetch(`https://graden-explorer-server.vercel.app/shareTips/${_id}/like`, {
     method: 'PATCH',
   })
   .then(res => {

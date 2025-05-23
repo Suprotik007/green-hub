@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAFgW4fujky-GbsX2BI_gDxqvLuW2hddes",
-  authDomain: "garden-king-auth.firebaseapp.com",
-  projectId: "garden-king-auth",
-  storageBucket: "garden-king-auth.firebasestorage.app",
-  messagingSenderId: "6420600485",
-  appId: "1:6420600485:web:daa56e511f0760e88adf4c"
+  apiKey:import.meta.env.VITE_apiKey,
+  authDomain:import.meta.env.VITE_authDomain, 
+  projectId:import.meta.env.VITE_projectId,
+  storageBucket:import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId, 
+  appId:import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
