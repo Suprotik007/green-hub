@@ -2,7 +2,7 @@ import React from 'react';
 
 const Faq = () => {
     return (
-        <div className='w-8/12 mx-auto  '>
+        <div className='w-8/12 mx-auto text-green-800 '>
             <h1 className='text-3xl font-semibold text-center py-10 border-b-2'>Frequently Asked Questions</h1>
            <div className=''>
 

@@ -202,11 +202,11 @@ const EditTip = () => {
               name="userName"
               defaultValue={user?.displayName || ''}
               readOnly
-              className="w-full border-2 border-green-800 rounded px-3 py-2 bg-gray-100 "
+              className="w-full border-2 border-green-800 text-green-800 rounded px-3 py-2 bg-gray-100 "
             />
           </div>
           <div>
-            <label htmlFor="userEmail" className="block font-semibold mb-1">
+            <label htmlFor="userEmail" className="block  font-semibold mb-1">
               User Email
             </label>
             <input
@@ -215,7 +215,7 @@ const EditTip = () => {
               name="userEmail"
               value={user?.email || ''}
               readOnly
-              className="w-full border-2 border-green-800 rounded px-3 py-2 bg-gray-100 "
+              className="w-full border-2 border-green-800 text-green-800 rounded px-3 py-2 bg-gray-100 "
             />
           </div>
         </div>

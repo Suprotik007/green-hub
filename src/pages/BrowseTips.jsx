@@ -53,10 +53,8 @@ const BrowseTips = () => {
           )}
 
           {filteredTips.map((tip, index) => (
-            <li key={tip._id} className="list-row  border-3 mb-5 flex items-center space-x-4 p-4 rounded shadow">
-             <div className='flex justify-between '>
-
-               <div className="text-3xl font-thin opacity-80 tabular-nums text-green-800">{String(index + 1)})</div>
+            <li key={tip._id} className="list-row border-3 mb-5 flex items-center  p-4 rounded shadow">
+              <div className="text-3xl font-thin opacity-80 tabular-nums text-green-800">{String(index + 1)})</div>
               <div>
                 <img className="size-11 rounded-box" src={tip.imagesUrl || 'https://via.placeholder.com/80'} alt={tip.title} />
               </div>
@@ -67,9 +65,8 @@ const BrowseTips = () => {
               </div>
               
                 <Link to={`/tipDetails/${tip._id}`}>
-                <button className="btn btn-outline    hover:bg-green-900 hover:text-white btn-ghost">See More</button>
+                <button className="btn btn-outline    hover:bg-green-900 hover:text-white ml-110 btn-ghost">See More</button>
               </Link>
-             </div>
               
             </li>
           ))}

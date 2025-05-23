@@ -9,6 +9,30 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
+// const [isDark, setIsDark] = useState(false);
+const [theme, setTheme] = useState('light');
+useEffect(() => {
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme('dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    setTheme('light');
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+}, []);
+
+ const handleToggle = () => {
+  const newTheme = theme === 'dark' ? 'light' : 'dark';
+  setTheme(newTheme);
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+};
+
   const handleLogOut = () => {
     logOut()
       .then(() => {
@@ -79,7 +103,9 @@ const Navbar = () => {
   )
 
   return (
-    <div className="navbar rounded-xl px-5 mt-2 bg-green-200 shadow-sm w-11/12 mx-auto">
+   <div className=''>
+
+     <div className="navbar rounded-xl px-5 mt-2 bg-green-200 shadow-sm w-11/12 mx-auto  ">
       <div className="navbar-start">
    <div className="dropdown">
     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -99,7 +125,9 @@ const Navbar = () => {
      </ul>
   </div> 
 
-      <div className="navbar-end relative">
+
+
+      <div className="navbar-end relative gap-6">
         {user ? (
           <div className="relative" ref={dropdownRef}>
             <img
@@ -122,7 +150,9 @@ const Navbar = () => {
                 </button>
               </div>
             )}
+            
           </div>
+          
         ) : (
           <Link to="/login">
             <button className="btn hover:text-white hover:bg-black btn-outline">Login</button>
@@ -130,7 +160,19 @@ const Navbar = () => {
         )}
         <ToastContainer />
       </div>
+      <div className=''>
+
+  <label className="toggle text-base-content">
+  <input onChange={handleToggle} checked={theme=== 'dark'} type="checkbox" value="synthwave" className="theme-controller" />
+
+  <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></g></svg>
+
+  <svg aria-label="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="currentColor"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></g></svg>
+
+</label>
+</div>
     </div>
+   </div>
   );
 };
 
