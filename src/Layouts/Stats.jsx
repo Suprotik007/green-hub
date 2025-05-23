@@ -36,7 +36,7 @@ const Stats = () => {
     <div className="stat-desc">21% more than last month</div>
   </div>
 
-  <div className="stat">
+  <div className="grid grid-cols-1">
     <div className="stat-figure text-secondary">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -72,3 +72,4 @@ const Stats = () => {
 };
 
 export default Stats;
+

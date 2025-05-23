@@ -1,13 +1,14 @@
 
+
 import React, { useEffect, useState } from 'react';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/NavBar';
-import { Link } from 'react-router';  
+import { Link } from 'react-router';
 import { Typewriter } from 'react-simple-typewriter';
 
 const BrowseTips = () => {
   const [tips, setTips] = useState([]);
-  const [filter, setFilter] = useState('All'); 
+  const [filter, setFilter] = useState('All');
 
   useEffect(() => {
     fetch('https://graden-explorer-server.vercel.app/shareTips')
@@ -15,9 +16,9 @@ const BrowseTips = () => {
       .then(data => setTips(data))
       // .catch(err => console.error('Failed to fetch tips:', err));
   }, []);
+
   const publicTips = tips.filter(tip => tip.availability === 'Public');
 
-  
   const filteredTips = publicTips.filter(tip => {
     if (filter === 'All') return true;
     return tip.difficulty === filter;
@@ -26,19 +27,20 @@ const BrowseTips = () => {
   return (
     <div>
       <Navbar />
-      <div className='w-9/12 mx-auto my-10'>
-        <h1 className='text-3xl w-6/12 mx-auto font-bold border-b-3 text-center pb-5'><Typewriter
-                  words={['Public Tips']}
-                  loop={0} 
-                  cursor
-                  cursorStyle='_'
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                /></h1>
+      <div className='w-11/12 sm:w-9/12 mx-auto my-10'>
+        <h1 className='text-3xl w-8/12 sm:w-6/12 mx-auto font-bold border-b-3 text-center pb-5'>
+          <Typewriter
+            words={['Public Tips']}
+            loop={0}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </h1>
 
-      
-        <div className="flex justify-center mt-5 space-x-4 mb-6">
+        <div className="flex flex-wrap justify-center mt-5 space-x-4 mb-6">
           {['All', 'Easy', 'Medium', 'Hard'].map(level => (
             <button
               key={level}
@@ -47,14 +49,14 @@ const BrowseTips = () => {
                 filter === level
                   ? 'bg-green-800 text-white'
                   : 'bg-gray-300 text-gray-700 hover:bg-green-500 hover:text-white'
-              }`}
+              } mb-2 sm:mb-0`}
             >
               {level}
             </button>
           ))}
         </div>
 
-        <ul className="list bg-base-100 rounded-box pt-10">
+        <ul className="list bg-base-100 rounded-box pt-10 space-y-5">
           {tips.length === 0 && <p>Loading tips...</p>}
 
           {filteredTips.length === 0 && tips.length > 0 && (
@@ -62,24 +64,37 @@ const BrowseTips = () => {
           )}
 
           {filteredTips.map((tip, index) => (
-            <li key={tip._id} className="list-row border-3 mb-5 flex items-center  p-4 rounded shadow">
-              <div className="text-3xl font-thin opacity-80 tabular-nums text-green-800">{String(index + 1)})</div>
-              <div>
-                <img className="size-11 rounded-box" src={tip.imagesUrl || 'https://via.placeholder.com/80'} alt={tip.title} />
+            <li
+              key={tip._id}
+              className="list-row border-3 p-4 rounded shadow flex flex-row flex-nowrap items-center space-x-4"
+            >
+              <div className="text-3xl font-thin opacity-80 tabular-nums text-green-800 flex-shrink-0">
+                {String(index + 1)}) 
               </div>
-              <div className="list-col-grow">
-                <div className="font-semibold text-xl">{tip.title}</div>
-                <div className="text-xs uppercase font-semibold opacity-60">{tip.category}</div>
-                
+
+              <div className="flex-shrink-0">
+                <img
+                  className="w-20 h-20 rounded-box object-cover"
+                  src={tip.imagesUrl || 'https://via.placeholder.com/80'}
+                  alt={tip.title}
+                />
               </div>
-              
+
+              <div className="list-col-grow flex-grow min-w-0">
+                <div className="font-semibold text-xl truncate">{tip.title}</div>
+                <div className="text-xs uppercase font-semibold opacity-60 truncate">{tip.category}</div>
+              </div>
+
+              <div className="flex-shrink-0">
                 <Link to={`/tipDetails/${tip._id}`}>
-                <button className="btn btn-outline    hover:bg-green-900 hover:text-white ml-110 btn-ghost">See More</button>
-              </Link>
-              
+                  <button className="btn btn-outline hover:bg-green-900 hover:text-white btn-ghost whitespace-nowrap">
+                    See More
+                  </button>
+                </Link>
+              </div>
             </li>
           ))}
-        </ul> 
+        </ul>
       </div>
       <Footer />
     </div>

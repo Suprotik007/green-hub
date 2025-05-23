@@ -27,7 +27,7 @@ const TrendingTips = () => {
         /></h1>
             <div>
             
-            <div className='grid grid-cols-3  pt-8 w-11/12 mx-auto'>
+            <div className='sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   pt-8 w-11/12 mx-auto'>
       
       {tips.map(singleTip => (
         <TipsCard key={singleTip._id} singleTip={singleTip} />
