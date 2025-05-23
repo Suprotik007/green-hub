@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
-
+import { Tooltip } from 'react-tooltip'
 
 import img1 from '../assets/garden-slide-1(1).jpg';
 import img2 from '../assets/garden-slide-2.jpg';
@@ -13,7 +13,19 @@ import img3 from '../assets/garden-slide-3.jpg';
 
 const Banner = () => {
   return (
-    <div className="mt-15  p-3 w-11/12 mx-auto">
+    <div className=" text-center justify-around p-3 w-11/12 mx-auto">
+      
+<div className='pb-5 pt-2'>
+  <a
+  data-tooltip-id="my-tooltip"
+  data-tooltip-content="Let's make the world green"
+>
+  𓍊𓋼𓍊𖡼.𖤣𖥧𖡼.𖤣𖥧𓋼𓍊𓋼  𓍊𓋼𓍊𖡼.𖤣𖥧𖡼.𖤣𖥧𓋼𓍊𓋼 𓍊𓋼𓍊𖡼.𖤣𖥧𖡼.𖤣𖥧𓋼𓍊𓋼
+</a>
+<Tooltip id="my-tooltip" />
+</div>
+
+
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

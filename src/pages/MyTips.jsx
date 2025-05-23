@@ -5,6 +5,7 @@ import Navbar from '../Components/NavBar';
 import { MdModeEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import Swal from 'sweetalert2';
+import { Typewriter } from 'react-simple-typewriter';
 const MyTips = () => {
     const [tips, setTips] = useState([]);
 // const {_id}=useParams()
@@ -57,7 +58,15 @@ Swal.fire({
         <div> 
           <Navbar></Navbar>
           <div className='w-9/12 mx-auto my-10'>
-         <h1 className='text-3xl font-bold border-b-3 text-center pb-5  '> My Tips </h1>
+         <h1 className='text-3xl font-bold border-b-3  w-6/12 mx-auto text-center pb-5  '> <Typewriter
+                   words={['My Tips']}
+                   loop={0} 
+                   cursor
+                   cursorStyle='_'
+                   typeSpeed={70}
+                   deleteSpeed={50}
+                   delaySpeed={1000}
+                 /> </h1>
             <div>
              
              

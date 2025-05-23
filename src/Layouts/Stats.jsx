@@ -1,9 +1,18 @@
 import React from 'react';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Stats = () => {
     return (
         <div className='w-[70%] mx-auto my-10'>
-            <h1 className='text-3xl w-6/12 mx-auto font-semibold text-center border-b-2 pb-6'>Statistics </h1>
+            <h1 className='text-3xl w-6/12 mx-auto font-semibold text-center border-b-2 pb-6'><Typewriter
+                      words={['Statistics']}
+                      loop={0} 
+                      cursor
+                      cursorStyle='_'
+                      typeSpeed={70}
+                      deleteSpeed={50}
+                      delaySpeed={1000}
+                    /> </h1>
             <div className='pt-6  '>
                 <div className="stats  mx-aut0 bg-base-300 shadow">
   <div className="stat ">

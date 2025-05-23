@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/NavBar';
 import { Link } from 'react-router';  
+import { Typewriter } from 'react-simple-typewriter';
 
 const BrowseTips = () => {
   const [tips, setTips] = useState([]);
@@ -26,7 +27,15 @@ const BrowseTips = () => {
     <div>
       <Navbar />
       <div className='w-9/12 mx-auto my-10'>
-        <h1 className='text-3xl font-bold border-b-3 text-center pb-5'>Public Tips</h1>
+        <h1 className='text-3xl w-6/12 mx-auto font-bold border-b-3 text-center pb-5'><Typewriter
+                  words={['Public Tips']}
+                  loop={0} 
+                  cursor
+                  cursorStyle='_'
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                /></h1>
 
       
         <div className="flex justify-center mt-5 space-x-4 mb-6">

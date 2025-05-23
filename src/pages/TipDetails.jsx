@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../Components/NavBar';
 import Footer from '../Components/Footer';
 import { useParams } from 'react-router'; 
+import { Typewriter } from 'react-simple-typewriter';
 
 const TipDetails = () => {
     const { _id } = useParams(); 
@@ -44,12 +45,20 @@ const TipDetails = () => {
         <div>
             <Navbar />
             <div className='my-10'>
-                <h1 className='text-3xl text-center border-b-2 pb-5 w-8/12 mx-auto font-semibold text-green-800'>
-                    See more about the Tip
+                <h1 className='text-3xl text-center border-b-2 pb-5 w-8/12 mx-auto font-semibold '>
+                    <Typewriter
+                              words={['See more about the tip']}
+                              loop={0} 
+                              cursor
+                              cursorStyle='_'
+                              typeSpeed={70}
+                              deleteSpeed={50}
+                              delaySpeed={1000}
+                            />
                 </h1>
 
                 <div className='mt-10 w-9/12 mx-auto'>
-                    <div className="card card-side rounded-2xl  border-3  border-green-800 bg-amber-20 shadow-sm">
+                    <div className="card card-side rounded-2xl  border-3   bg-amber-20 shadow-sm">
                         <figure>
                             <img 
                                 src={tip.imagesUrl }
