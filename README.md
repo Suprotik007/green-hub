@@ -3,7 +3,7 @@
 **Live Site URL:**
  1) [https://graden-explorer-server.vercel.app/]
 
-2) []
+2) [https://graden-explorer-server.vercel.app/]
 ---
 
 ## Project Description
