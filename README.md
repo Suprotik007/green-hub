@@ -1,7 +1,7 @@
 # Garden Explorer - Gardening Community & Resource Hub
 
 **Live Site URL:**
- 1) [https://graden-explorer-server.vercel.app/]
+ 1) [https://greenhub-ox.netlify.app/]
 
 2) [https://graden-explorer-server.vercel.app/]
 ---
