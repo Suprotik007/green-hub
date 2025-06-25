@@ -39,9 +39,11 @@ Garden Explorer is a vibrant platform designed for gardening enthusiasts to conn
 
 ---
 
-## Date
+## Installation 
+Clone the repository and install dependencies:
 
-Friday, May 23, 2025
+git clone https://github.com/Suprotik007/greenhub.git cd greenhub npm install npm start
+
 
 ---
 
