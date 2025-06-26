@@ -11,11 +11,11 @@ const DtlGardenersCard = ({gardener}) => {
   <div className="card-body">
     <h2 className="card-title">{gardener.name}</h2>
     <div className='grid grid-cols-2 gap-3'>
-        <p className='font-semibold'>Gender : <span className='badge badge-error'>{gardener.gender}</span></p>
-    <p className='font-semibold'>Age : <span className='badge badge-accent'>{gardener.age}</span></p>
-    <p className='font-semibold'>Activity : <span className='badge badge-info'>{gardener.activity}</span></p>
-    <p className='font-semibold'>Tips : <span className='badge badge-error'>{gardener.total_shared_tips}</span></p>
-    <p className='font-semibold'>Exp : <span className='badge badge-error'>{gardener.experience}y</span></p>
+        <p className='font-semibold'>Gender : <span className='badge badge-neutral'>{gardener.gender}</span></p>
+    <p className='font-semibold'>Age : <span className='badge badge-neutral'>{gardener.age}</span></p>
+    <p className='font-semibold'>Activity : <span className='badge badge-neutral'>{gardener.activity}</span></p>
+    <p className='font-semibold'>Tips : <span className='badge badge-neutral'>{gardener.total_shared_tips}</span></p>
+    <p className='font-semibold'>Exp : <span className='badge badge-neutral'>{gardener.experience}y</span></p>
     
     </div>
    

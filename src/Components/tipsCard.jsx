@@ -3,9 +3,9 @@ import React from 'react';
 const TipsCard = ({singleTip}) => {
     return (
         <div className='m-8'>
-        <div className="card  bg-base-300 border-2 border-dashed   shadow-sm">
+        <div className="card    ">
   
-  <div className="card bg-base-200  shadow-sm">
+  <div className="card  border-2 h-[400px] border-teal-600  shadow-md">
   <figure className="pt-5">
     <img
       src={singleTip.imagesUrl}
@@ -16,7 +16,7 @@ const TipsCard = ({singleTip}) => {
     <p>{singleTip.category}</p>
     <p>{singleTip.description}</p>
     <div className="card-actions">
-      <div className="badge badge-primary flex items-center gap-1" disabled>
+      <div className="badge badge-neutral flex items-center gap-1" disabled>
                                 Likes: {singleTip.totalLiked || 0}
                             </div>
     </div>

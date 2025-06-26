@@ -3,8 +3,8 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Stats = () => {
     return (
-        <div className='w-[70%] mx-auto my-10'>
-            <h1 className='text-3xl w-6/12 mx-auto font-semibold text-center border-b-2 pb-6'><Typewriter
+        <div className=' hidden sm:block  mx-auto my-10'>
+            <h1 className='text-3xl w-3/12 mx-auto font-semibold text-center border-b-2 text-teal-800  pb-6'><Typewriter
                       words={['Statistics']}
                       loop={0} 
                       cursor
@@ -13,8 +13,8 @@ const Stats = () => {
                       deleteSpeed={50}
                       delaySpeed={1000}
                     /> </h1>
-            <div className='pt-6  '>
-                <div className="stats  mx-aut0 bg-base-300 shadow">
+            <div className='pt-6 md:ml-35 lg:ml-80'>
+                <div className="stats   mx-aut0 bg-base-300 shadow">
   <div className="stat ">
     <div className="stat-figure text-primary">
       <svg

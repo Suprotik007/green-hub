@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const Faq = () => {
     return (
         <div className='w-8/12 mx-auto   '>
-            <h1 className='text-3xl  font-semibold text-center py-10 border-b-2'> <Typewriter
+            <h1 className='text-3xl text-teal-800   font-semibold text-center py-10 border-b-2'> <Typewriter
           words={['Frequently asked Questions']}
           loop={0} 
           cursor
@@ -55,7 +55,7 @@ const Faq = () => {
   </div>
 </div>
 
-<div className="collapse text-green-800 collapse-arrow  border bg-green-100 mt-1">
+<div className="collapse text-green-800 collapse-arrow  border bg-green-100 mt-1 ">
   <input type="radio" name="my-accordion-2" />
   <div className="collapse-title font-semibold">How do I rotate crops in my garden?</div>
   <div className="collapse-content text-sm">

@@ -21,7 +21,7 @@ const AllGardeners = () => {
             <div>
                 <Navbar></Navbar>
 <div className='w-12/12 mx-auto my-10 gap-8'>
-    <h1 className='text-3xl text-center font-semibold mt-10 border-b-3 pb-5  w-4/12 mx-auto mb-5'><Typewriter
+    <h1 className='text-3xl text-teal-800 text-center font-semibold mt-10 border-b-3 pb-5  w-4/12 mx-auto mb-5'><Typewriter
               words={['All Gardeners']}
               loop={0} 
               cursor
