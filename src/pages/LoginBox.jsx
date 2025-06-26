@@ -61,15 +61,15 @@ const LoginBox = () => {
   <Navbar></Navbar>
             <div className="hero  min-h-screen">
     
-    <div className="card bg-base-300 border-2 border-green-800 text-green-800   p-5 rounded-2xl w-full max-w-sm shrink-0 shadow-2xl">
+    <div className="card bg-base-100 border-2 border-teal-700     p-5 rounded-2xl w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
-      <h1 className="text-4xl  mb-10 font-bold text-center">Login now!</h1>
+      <h1 className="text-4xl text-teal-700 mb-10 font-bold text-center">Login now!</h1>
         <form  onSubmit={handleLogin} className="fieldset">
           <label className="label font-semibold">Email</label>
-          <input type="email" required name='email' className="input border-2 border-green-800 font-semibold" placeholder="Email"   value={email}
+          <input type="email" required name='email' className="input border-2 border-teal-700 font-semibold" placeholder="Email"   value={email}
               onChange={(e) => setEmail(e.target.value)}/>
           <label className="label font-semibold">Password</label>
-          <input type="password" required name='password' className="input text-black border-2 border-green-800 font-semibold" placeholder="Password" />
+          <input type="password" required name='password' className="input  border-2 border-teal-700 font-semibold" placeholder="Password" />
          
 
         

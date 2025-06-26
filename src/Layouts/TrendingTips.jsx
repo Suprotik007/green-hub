@@ -16,7 +16,7 @@ const TrendingTips = () => {
       }, []);
     return (
         <div className='my-10'>
-            <h1 className='text-3xl border-b-2 pb-5 w-4/12 mx-auto font-semibold text-teal-800 text-center'> <Typewriter
+            <h1 className='text-3xl border-b-2 pb-5 w-4/12 mx-auto font-semibold text-teal-700 text-center'> <Typewriter
           words={['Trending Tips']}
           loop={0} 
           cursor

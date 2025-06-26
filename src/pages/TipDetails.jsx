@@ -55,9 +55,9 @@ const TipDetails = () => {
     <div>
       <Navbar />
       <div className='my-10'>
-        <h1 className='text-3xl text-center border-b-2 pb-5 w-8/12 mx-auto font-semibold'>
+        <h1 className='text-3xl text-teal-700  text-center border-b-2 pb-5 w-8/12 mx-auto font-semibold'>
           <Typewriter
-            words={['See more about the tip']}
+            words={['Tip Details']}
             loop={0} 
             cursor
             cursorStyle='_'
@@ -68,24 +68,24 @@ const TipDetails = () => {
         </h1>
 
         <div className='mt-10 w-11/12 sm:w-9/12 mx-auto'>
-          <div className="card rounded-2xl border-3 bg-amber-20 shadow-sm flex flex-col sm:flex-row">
+          <div className="card rounded-2xl border-3 border-teal-800  bg-amber-20 shadow-sm flex flex-col sm:flex-row">
             <figure className="sm:w-1/2">
               <img 
                 src={tip.imagesUrl}
                 alt={tip.title}
-                className="rounded-xl object-cover w-full h-full"
+                className="rounded-xl object-cover w-full p-3"
               />
             </figure>
             <div className="card-body sm:w-1/2">
-              <h2 className="text-lg font-semibold">Title : {tip.title}</h2>
-              <div className="text-lg font-semibold">Category : {tip.category}</div>
+              <h2 className="text-lg font-semibold">Title : {tip.title}</h2> <br />
+              <div className="text-lg font-semibold">Category : {tip.category}</div> <br />
               <p className="text-lg font-semibold">Plant type : {tip.plantType}</p>
               <p className="text-lg font-semibold">Level : {tip.difficulty}</p>
-              <p className="font-semibold text-purple-800">Description : {tip.description}</p>
+              <p className="font-semibold  ">Description : {tip.description}</p>
 
               <div className="card-actions justify-end mt-4">
                 <button 
-                  className="btn btn-primary flex items-center gap-2"
+                  className="btn btn-accent flex items-center gap-2"
                   onClick={handleLike}
                 >
                   <BiSolidLike />  <span>{tip.totalLiked || 0}</span>

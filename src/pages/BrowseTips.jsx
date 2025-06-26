@@ -28,7 +28,7 @@ const BrowseTips = () => {
     <div>
       <Navbar />
       <div className='w-11/12 sm:w-9/12 mx-auto my-10'>
-        <h1 className='text-3xl w-8/12 sm:w-6/12 mx-auto font-bold border-b-3 text-center pb-5'>
+        <h1 className='text-3xl text-teal-700 w-8/12 sm:w-6/12 mx-auto font-bold border-b-3 text-center pb-5'>
           <Typewriter
             words={['Public Tips']}
             loop={0}
@@ -47,8 +47,8 @@ const BrowseTips = () => {
               onClick={() => setFilter(level)}
               className={`btn btn-sm ${
                 filter === level
-                  ? 'bg-green-800 text-white'
-                  : 'bg-gray-300 text-gray-700 hover:bg-green-500 hover:text-white'
+                  ? 'bg-teal-700 text-white'
+                  : 'bg-gray-300 text-gray-700 hover:bg-black hover:text-white'
               } mb-2 sm:mb-0`}
             >
               {level}
@@ -66,9 +66,9 @@ const BrowseTips = () => {
           {filteredTips.map((tip, index) => (
             <li
               key={tip._id}
-              className="list-row border-3 p-4 rounded shadow flex flex-row flex-nowrap items-center space-x-4"
+              className="list-row border-teal-700 border-3 p-4 rounded shadow flex flex-row flex-nowrap items-center space-x-4"
             >
-              <div className="text-3xl font-thin opacity-80 tabular-nums text-green-800 flex-shrink-0">
+              <div className="text-3xl font-thin opacity-80 tabular-nums text-teal-700 flex-shrink-0">
                 {String(index + 1)}) 
               </div>
 
@@ -87,7 +87,7 @@ const BrowseTips = () => {
 
               <div className="flex-shrink-0">
                 <Link to={`/tipDetails/${tip._id}`}>
-                  <button className="btn btn-outline hover:bg-green-900 hover:text-white btn-ghost whitespace-nowrap">
+                  <button className="btn btn-outline  hover:bg-teal-800 hover:text-white btn-ghost whitespace-nowrap">
                     See More
                   </button>
                 </Link>

@@ -15,7 +15,7 @@ const ActiveGardener = () => {
 
   return (
     <div className='w-12/12 mx-auto gap-8'>
-      <h1 className='text-3xl text-center font-semibold mt-10 border-b-2 pb-5 w-4/12 mx-auto text-teal-800 mb-5'>
+      <h1 className='text-3xl text-center font-semibold mt-10 border-b-2 pb-5 w-4/12 mx-auto text-teal-700 mb-5'>
         <Typewriter
           words={['Active Gardeners']}
           loop={0}

@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const Stats = () => {
     return (
         <div className=' hidden sm:block  mx-auto my-10'>
-            <h1 className='text-3xl w-3/12 mx-auto font-semibold text-center border-b-2 text-teal-800  pb-6'><Typewriter
+            <h1 className='text-3xl w-3/12 mx-auto font-semibold text-center border-b-2 text-teal-700  pb-6'><Typewriter
                       words={['Statistics']}
                       loop={0} 
                       cursor
@@ -36,7 +36,7 @@ const Stats = () => {
     <div className="stat-desc">21% more than last month</div>
   </div>
 
-  <div className="grid grid-cols-1">
+  <div className="stat">
     <div className="stat-figure text-secondary">
       <svg
         xmlns="http://www.w3.org/2000/svg"

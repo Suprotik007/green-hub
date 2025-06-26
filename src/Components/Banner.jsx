@@ -15,7 +15,7 @@ const Banner = () => {
   return (
     <div className=" text-center justify-around p-3 w-11/12 mx-auto">
       
-<div className='pb-5 pt-2'>
+<div className='pb-5 pt-2 text-teal-700'>
   <a
   data-tooltip-id="my-tooltip"
   data-tooltip-content="Let's make the world green"
@@ -36,7 +36,7 @@ const Banner = () => {
         pagination={{ clickable: true }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="rounded-box h-[70vh] max-h-[600px]" 
+        className="rounded-box h-[62vh] max-h-[400px]" 
       >
 
         <SwiperSlide className="relative">
@@ -48,7 +48,7 @@ const Banner = () => {
           <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white p-4 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">Grow Together</h2>
             <p className="text-xl mb-6 max-w-md">Join our community of passionate gardeners</p>
-            <button className="btn btn-accent btn-lg">Join Now</button>
+            {/* <button className="btn btn-accent btn-lg">Join Now</button> */}
           </div>
         </SwiperSlide>
 
@@ -62,7 +62,7 @@ const Banner = () => {
           <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white p-4 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">Urban Gardening Made Simple</h2>
             <p className="text-xl mb-6 max-w-md">Small spaces? No problem!</p>
-            <button className="btn btn-accent btn-lg">Learn Tips</button>
+            {/* <button className="btn btn-accent btn-lg">Learn Tips</button> */}
           </div>
         </SwiperSlide>
 
@@ -76,7 +76,7 @@ const Banner = () => {
           <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white p-4 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">Your Green Journey Starts Here</h2>
             <p className="text-xl mb-6 max-w-md">Beginner-friendly guides and resources</p>
-            <button className="btn btn-accent btn-lg">Get Started</button>
+            {/* <button className="btn btn-accent btn-lg">Get Started</button> */}
           </div>
         </SwiperSlide>
       </Swiper>

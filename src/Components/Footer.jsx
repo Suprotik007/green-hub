@@ -3,10 +3,10 @@ import React from 'react';
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-horizontal footer-center bg-green-200 text-green-800  rounded-2xl mb-1 mt-10 p-8 w-11/12 mx-auto">
+      <footer className="footer footer-horizontal footer-center border-t-2 text-teal-700   mb-1 mt-10 p-8 w-11/12 mx-auto">
 
-        <a className=" text-xl font-bold font-mono text-green-800 Kablammo">GreenHub</a>
-  <nav className="grid grid-flow-col gap-4">
+        <a className=" text-xl font-bold font-mono Kablammo">GreenHub</a>
+  <nav className="grid grid-flow-col   gap-4">
     <a className="link link-hover hidden sm:block">About Us</a>
     <a className="link link-hover">Contact</a>
     <a className="link link-hover">Privacy Policy</a>
@@ -50,7 +50,7 @@ const Footer = () => {
     </div>
   </nav>
   <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by <span className='font-bold text-green-800 Kablammo'>GreenHub</span></p>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved by <span className='font-bold text-teal-700 Kablammo'>GreenHub</span></p>
   </aside>
 </footer>
     </div>

@@ -57,11 +57,11 @@ useEffect(() => {
 
   const links=(
         
-        <div className="flex space-x-8 font-semibold text-green-800">
+        <div className="flex sm:space-x-1.5 md:space-x-8  font-semibold text-teal-600">
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? 'text-green-800 border-b-2 border-green-900' : ''
+            isActive ? 'text-teal-600 border-b-2 border-teal-700 ' : ''
           }
         >
           Home
@@ -69,55 +69,70 @@ useEffect(() => {
          <NavLink
           to="/explore"
           className={({ isActive }) =>
-            isActive ? 'text-green-800 border-b-2 border-green-900' : ''
+            isActive ? 'text-teal-600 border-b-2 border-teal-700' : ''
           }
         >
           Explore Gardener
         </NavLink>
-        <NavLink
-          to="/shareTips"
-          className={({ isActive }) =>
-            isActive ? 'text-green-800 border-b-2 border-green-900' : ''
-          }
-        >
-          Share a Garden Tip 
-        </NavLink>
+      {user && (
+      <NavLink
+        to="/shareTips"
+        className={({ isActive }) =>
+          isActive ? 'text-teal-600 border-b-2 border-teal-700' : ''
+        }
+      >
+        Share Tip
+      </NavLink>
+    )}
         <NavLink
           to="/browseTips"
           className={({ isActive }) =>
-            isActive ? 'text-green-800 border-b-2 border-green-900' : ''
+            isActive ? 'text-teal-600 border-b-2 border-teal-700' : ''
           }
         >
           Browse Tips
         </NavLink>
        
-        <NavLink
-          to="/myTips"
-          className={({ isActive }) =>
-            isActive ? 'text-green-800 border-b-2 border-green-900' : ''
-          }
-        >
-          My Tips
-        </NavLink>
+        {/* {user && (
+      <NavLink
+        to="/myTips"
+        className={({ isActive }) =>
+          isActive ? 'text-teal-600 border-b-2 border-teal-700' : ''
+        }
+      >
+        My Tips
+      </NavLink>
+    )} */}
+
+    {user && (
+      <NavLink
+        to="/dashBoard"
+        className={({ isActive }) =>
+          isActive ? 'text-teal-600 border-b-2 border-teal-700' : ''
+        }
+      >
+        Dashboard
+      </NavLink>
+    )}
       </div>
   )
 
   return (
-   <div className=''>
+   <div className=' top-0 left-0 bottom-0 right-0 z-50   '>
 
-     <div className="navbar rounded-xl px-5 mt-2 bg-green-200 shadow-sm w-11/12 mx-auto  ">
+     <div className="navbar  border-b-2   border-teal-700 px-5 mt-2 w-11/12 mx-auto ">
       <div className="navbar-start">
-   <div className="dropdown ">
-    <div tabIndex={0} role="button" className="btn btn-ghost text-green-800 lg:hidden">
+   <div className="dropdown   ">
+    <div tabIndex={0} role="button" className="btn btn-ghost  text-teal-500 lg:hidden">
          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5  hover:text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
        </div>
        <ul
          tabIndex={0}
-         className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-full  p-2   text-xs shadow">
+         className="  menu menu-xs dropdown-content bg-cyan-950 rounded-box z-10 mt-4 w-100 p-2  shadow flex flex-col">
           {links}
-       </ul>
+       </ul> 
      </div>
-     <a className=" text-xl font-bold font-mono text-green-800 Kablammo">GreenHub</a>
+     <a className=" text-xl font-bold font-mono text-teal-600 Kablammo">GreenHub</a>
    </div>
    <div className="navbar-center hidden lg:flex">
      <ul className="menu menu-horizontal px-1 ">
@@ -134,7 +149,7 @@ useEffect(() => {
               src={user.photoURL || ''}
               alt={user.displayName || 'User'}
               title={user.displayName || ''}
-              className="w-12 h-12 rounded-full cursor-pointer border border-green-700"
+              className="w-12 h-12 rounded-full cursor-pointer border border-teal-500"
               onClick={() => setDropdownOpen((prev) => !prev)}
             />
             {dropdownOpen && (
@@ -162,7 +177,7 @@ useEffect(() => {
       </div>
       <div className=''>
 
-  <label className="toggle text-base-content">
+  <label className="toggle  text-teal-700 ">
   <input onChange={handleToggle} checked={theme=== 'dark'} type="checkbox" value="synthwave" className="theme-controller" />
 
   <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></g></svg>

@@ -51,7 +51,7 @@ const MyTips = () => {
     <div>
       <Navbar />
       <div className='w-11/12 sm:w-9/12 mx-auto my-10'>
-        <h1 className='text-3xl font-bold border-b-3 w-6/12 mx-auto text-center pb-5'>
+        <h1 className='text-3xl font-bold border-b-3 w-6/12 mx-auto text-center text-teal-700 pb-5'>
           <Typewriter
             words={['My Tips']}
             loop={0}

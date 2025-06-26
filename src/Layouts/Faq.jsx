@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const Faq = () => {
     return (
         <div className='w-8/12 mx-auto   '>
-            <h1 className='text-3xl text-teal-800   font-semibold text-center py-10 border-b-2'> <Typewriter
+            <h1 className='text-3xl text-teal-700  font-semibold text-center py-10 border-b-2'> <Typewriter
           words={['Frequently asked Questions']}
           loop={0} 
           cursor
