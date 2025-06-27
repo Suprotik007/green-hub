@@ -74,16 +74,7 @@ useEffect(() => {
         >
           Explore Gardener
         </NavLink>
-      {user && (
-      <NavLink
-        to="/shareTips"
-        className={({ isActive }) =>
-          isActive ? 'text-teal-600 border-b-2 border-teal-700' : ''
-        }
-      >
-        Share Tip
-      </NavLink>
-    )}
+      
         <NavLink
           to="/browseTips"
           className={({ isActive }) =>
@@ -92,18 +83,7 @@ useEffect(() => {
         >
           Browse Tips
         </NavLink>
-       
-        {/* {user && (
-      <NavLink
-        to="/myTips"
-        className={({ isActive }) =>
-          isActive ? 'text-teal-600 border-b-2 border-teal-700' : ''
-        }
-      >
-        My Tips
-      </NavLink>
-    )} */}
-
+      
     {user && (
       <NavLink
         to="/dashBoard"
@@ -170,7 +150,7 @@ useEffect(() => {
           
         ) : (
           <Link to="/login">
-            <button className="btn hover:text-white hover:bg-black btn-outline">Login</button>
+            <button className="btn btn-accent btn-md rounded-full btn-outline">Login</button>
           </Link>
         )}
         <ToastContainer />

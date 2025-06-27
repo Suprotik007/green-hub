@@ -11,6 +11,7 @@ import TipDetails from './pages/TipDetails';
 import MyTips from './pages/MyTips';
 import EditTip from './pages/EditTip';
 import AllGardeners from './pages/AllGardeners';
+import DashboardLayout from './DashBoardLayout/DashBoardLayout';
 
 const router = createBrowserRouter([
   {
@@ -29,12 +30,7 @@ const router = createBrowserRouter([
             path:'/reg',
           Component: RegBox
           },
-          {
-            path :'/shareTips',
-           element: <PrivateRoute>
-            <ShareGardentip></ShareGardentip>
-           </PrivateRoute>
-          },
+          
           {
             path:'/browseTips',
             
@@ -46,12 +42,7 @@ const router = createBrowserRouter([
             <TipDetails></TipDetails>
            </PrivateRoute>
         },
-        {
-          path:'/myTips',
-          element: <PrivateRoute> 
-            <MyTips></MyTips>
-           </PrivateRoute>
-        },
+        
         {
           path:'/editTip/:id',
           loader:({params})=>fetch(`https://graden-explorer-server.vercel.app/shareTips/${params.id}`),
@@ -62,7 +53,32 @@ const router = createBrowserRouter([
         {
           path: '/explore',
           Component: AllGardeners
-        }
+        },
+        {
+    path: '/dashboard',
+   Component:DashboardLayout,
+  
+    children: [
+      {
+  index: true,
+  
+  Component:MainLayout
+},
+
+      {
+          path:'myTips',
+          element: <PrivateRoute> 
+            <MyTips></MyTips>
+           </PrivateRoute>
+        },
+        {
+            path :'shareTips',
+           element: <PrivateRoute>
+            <ShareGardentip></ShareGardentip>
+           </PrivateRoute>
+          },
+    ]
+  }
   
 
 ]);
