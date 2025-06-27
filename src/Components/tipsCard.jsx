@@ -16,7 +16,7 @@ const TipsCard = ({singleTip}) => {
     <p>{singleTip.category}</p>
     <p>{singleTip.description}</p>
     <div className="card-actions">
-      <div className="badge badge-neutral flex items-center gap-1" disabled>
+      <div className="badge text-black p-4 bg-teal-400 flex items-center gap-1" disabled>
                                 Likes: {singleTip.totalLiked || 0}
                             </div>
     </div>

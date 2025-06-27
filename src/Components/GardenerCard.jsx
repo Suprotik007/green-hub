@@ -17,10 +17,10 @@ const GardenerCard = ({singleGardener}) => {
       
     </h2>
     <p></p>
-    <div className="card-actions justify-end ">
-      <div className="badge badge-neutral ">{singleGardener.gender}</div>
-      <div className="badge badge-neutral ">Age :{singleGardener.age}</div>
-      <div className="badge badge-neutral ">Exp:{singleGardener.experience}y</div>
+    <div className="card-actions  justify-end ">
+      <div className="badge text-black bg-teal-400 ">{singleGardener.gender}</div>
+      <div className="badge text-black bg-cyan-400 ">Age :{singleGardener.age}</div>
+      <div className="badge text-black bg-green-400 ">Exp:{singleGardener.experience}y</div>
     </div>
   </div>
 </div>

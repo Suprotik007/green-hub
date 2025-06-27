@@ -62,15 +62,15 @@ const MyTips = () => {
             delaySpeed={1000}
           />
         </h1>
-        <div>
+        <div className=''>
           <ul className="list rounded-box pt-10 space-y-5">
             {tips.length === 0 && <p>Loading tips...</p>}
             {tips.map((tip, index) => (
               <li
                 key={tip._id}
-                className="list-row border-3 p-4 rounded shadow flex flex-row flex-nowrap items-center space-x-4"
+                className="list-row border-3 border-teal-700 p-4 rounded shadow flex flex-row flex-nowrap items-center space-x-4"
               >
-                <div className="text-3xl font-thin opacity-80 tabular-nums text-green-800 flex-shrink-0">
+                <div className="text-3xl font-thin opacity-80 tabular-nums  flex-shrink-0">
                   {String(index + 1)}) 
                 </div>
 

@@ -66,9 +66,9 @@ const EditTip = () => {
             <div>
                 <div>
 <Navbar></Navbar>
-     <div className="max-w-3xl mx-auto my-10 p-6 border-2 border-dashed rounded-lg shadow-md">
-      <h2 className="text-3xl font-bold  mb-6 text-center text-green-800"> Edit Garden Tip</h2>
-      <form onSubmit={handleUpdate} className="space-y-5">
+     <div className="max-w-3xl mx-auto my-10 p-6 border-2 border-teal-700  rounded-lg shadow-md">
+      <h2 className="text-3xl font-bold  mb-6 text-center text-teal-700"> Edit Garden Tip</h2>
+      <form onSubmit={handleUpdate} className="space-y-5 ">
         
         <div>
           <label htmlFor="title" className="block  font-semibold mb-1">
@@ -81,7 +81,7 @@ const EditTip = () => {
             defaultValue={title}
             // value={formData.title}
             onChange={handleChange}
-            className="w-full  rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 border-2 border-green-800"
+            className="w-full  rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 border-2 border-teal-700"
             required
           />
         </div>
@@ -98,7 +98,7 @@ const EditTip = () => {
             
             defaultValue={plantType}
             onChange={handleChange}
-            className="w-full border-2 border-green-800 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full border-2 border-teal-700 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
             required
           />
         </div>
@@ -113,11 +113,11 @@ const EditTip = () => {
             name="difficulty"
             defaultValue={difficulty}
             onChange={handleChange}
-            className="w-full border-2 border-green-800  rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full border-2 border-teal-700 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-400"
           >
-             <option className='text-green-800'>Easy</option>
-            <option className='text-green-800'>Medium</option>
-            <option className='text-green-800'>Hard</option>
+             <option className='text-teal-800'>Easy</option>
+            <option className='text-teal-800'>Medium</option>
+            <option className='text-teal-800'>Hard</option>
           </select>
         </div>
 
@@ -133,7 +133,7 @@ const EditTip = () => {
             placeholder="Write your garden tip here..."
             defaultValue={description}
             onChange={handleChange}
-            className="w-full border-2 border-green-800 rounded px-3 py-2 "
+            className="w-full border-2 border-teal-700  rounded px-3 py-2 "
             required
           />
         </div>
@@ -150,7 +150,7 @@ const EditTip = () => {
             
             defaultValue={imagesUrl}
             onChange={handleChange}
-            className="w-full border-2 border-green-800 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full border-2 border-teal-700 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-400"
           />
         </div>
 
@@ -164,7 +164,7 @@ const EditTip = () => {
             name="category"
             defaultValue={category}
             onChange={handleChange}
-            className="w-full border-2 border-green-800 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full border-2 border-teal-700 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
           >
            <option className='text-green-800'>Composting</option>
             <option className='text-green-800'>Plant Care</option>
@@ -185,7 +185,7 @@ const EditTip = () => {
             name="availability"
             defaultValue={availability}
             onChange={handleChange}
-            className="w-full border-2 border-green-800 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full border-2 border-teal-700 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
           >
               <option className='text-green-800'>Public</option>
             <option className='text-green-800'>Hidden</option>
@@ -203,7 +203,7 @@ const EditTip = () => {
               name="userName"
               defaultValue={user?.displayName || ''}
               readOnly
-              className="w-full border-2 border-green-800 text-green-800 rounded px-3 py-2 bg-gray-100 "
+              className="w-full border-2 border-teal-700 text-green-800 rounded px-3 py-2 bg-gray-100 "
             />
           </div>
           <div>
@@ -216,7 +216,7 @@ const EditTip = () => {
               name="userEmail"
               value={user?.email || ''}
               readOnly
-              className="w-full border-2 border-green-800 text-green-800 rounded px-3 py-2 bg-gray-100 "
+              className="w-full border-2 border-teal-700 text-green-800 rounded px-3 py-2 bg-gray-100 "
             />
           </div>
         </div>
@@ -225,7 +225,7 @@ const EditTip = () => {
         <div>
           <button
             type="submit"
-            className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded transition"
+            className="btn btn-accent  font-semibold px-6 py-3 rounded transition"
           >
             Update Tip
           </button>

@@ -68,7 +68,7 @@ const BrowseTips = () => {
               key={tip._id}
               className="list-row border-teal-700 border-3 p-4 rounded shadow flex flex-row flex-nowrap items-center space-x-4"
             >
-              <div className="text-3xl font-thin opacity-80 tabular-nums text-teal-700 flex-shrink-0">
+              <div className="text-3xl font-thin opacity-80 tabular-nums  flex-shrink-0">
                 {String(index + 1)}) 
               </div>
 
