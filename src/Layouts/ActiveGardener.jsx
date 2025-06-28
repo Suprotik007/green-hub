@@ -26,7 +26,7 @@ const ActiveGardener = () => {
           delaySpeed={1000}
         />
       </h1>
-      <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto pt-8'>
+      <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 w-11/12 mx-auto pt-8'>
         {activeGardeners.map(singleGardener => (
           <GardenerCard key={singleGardener.id} singleGardener={singleGardener} />
         ))}

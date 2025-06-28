@@ -30,7 +30,7 @@ const AllGardeners = () => {
               deleteSpeed={50}
               delaySpeed={1000}
             /></h1>
-     <div className='sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto gap-8 pt-8 '>
+     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto gap-8 '>
       
       {allGardeners.map(gardener => (
          <DtlGardenersCard key={gardener._id} gardener={gardener} />

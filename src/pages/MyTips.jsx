@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Footer from '../Components/Footer';
 import { Link } from 'react-router';
 import Navbar from '../Components/NavBar';
@@ -7,16 +7,33 @@ import { MdModeEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import Swal from 'sweetalert2';
 import { Typewriter } from 'react-simple-typewriter';
+import { AuthContext } from '../provider/Authprovider';
+  
 
 const MyTips = () => {
   const [tips, setTips] = useState([]);
+  const { user } = useContext(AuthContext);
 
-  useEffect(() => {
-    fetch('https://graden-explorer-server.vercel.app/shareTips')
+  // useEffect(() => {
+  //   fetch('https://graden-explorer-server.vercel.app/shareTips')
+  //     .then(res => res.json())
+  //     .then(data => setTips(data))
+  //     .catch(err => console.error('Failed to fetch tips:', err));
+  // }, []);
+
+useEffect(() => {
+  if (user && user.email) {
+    fetch(`https://graden-explorer-server.vercel.app/shareTips?email=${user.email}`)
       .then(res => res.json())
       .then(data => setTips(data))
       .catch(err => console.error('Failed to fetch tips:', err));
-  }, []);
+    
+      
+  }
+}, [user]);
+
+
+
 
   const handleDelete = (_id) => {
     Swal.fire({
@@ -76,26 +93,26 @@ const MyTips = () => {
 
                 <div className="flex-shrink-0">
                   <img
-                    className="w-20 h-20 rounded-box object-cover"
+                    className= "w-20 h-20 rounded-box object-cover"
                     src={tip.imagesUrl || 'https://via.placeholder.com/80'}
                     alt={tip.title}
                   />
                 </div>
 
                 <div className="list-col-grow flex-grow min-w-0">
-                  <div className="font-semibold text-xl truncate">{tip.title}</div>
-                  <div className="text-xs uppercase font-semibold opacity-90 truncate">{tip.category}</div>
+                  <div className="font-semibold text-xl hidden sm:block truncate">{tip.title}</div>
+                  <div className="text-xs uppercase hidden sm:block font-semibold opacity-90 truncate">{tip.category}</div>
                 </div>
 
                 <Link to={`/editTip/${tip._id}`}>
-                  <button className="btn btn-outline btn-accent border-2 hover:bg-green-500 whitespace-nowrap">
+                  <button className="btn btn-outline btn-xs md:btn-md btn-accent border-2 hover:bg-green-500 whitespace-nowrap">
                     <MdModeEdit size={20} />
                   </button>
                 </Link>
 
                 <button
                   onClick={() => handleDelete(tip._id)}
-                  className="btn btn-error border-2 btn-outline hover:bg-red-400 whitespace-nowrap"
+                  className="btn btn-error btn-xs md:btn-md border-2 btn-outline hover:bg-red-400 whitespace-nowrap"
                 >
                   <MdDelete size={20} />
                 </button>

@@ -71,10 +71,10 @@ const BrowseTips = () => {
               <div className="text-3xl font-thin opacity-80 tabular-nums  flex-shrink-0">
                 {String(index + 1)}) 
               </div>
-
-              <div className="flex-shrink-0">
+{/* hidden sm:block */}
+              <div className="flex-shrink-0 ">
                 <img
-                  className="w-20 h-20 rounded-box object-cover"
+                  className="w-10 h-10   md:w-20 md:h-20 rounded-box object-cover"
                   src={tip.imagesUrl || 'https://via.placeholder.com/80'}
                   alt={tip.title}
                 />
@@ -87,7 +87,7 @@ const BrowseTips = () => {
 
               <div className="flex-shrink-0">
                 <Link to={`/tipDetails/${tip._id}`}>
-                  <button className="btn btn-outline  hover:bg-teal-800 hover:text-white btn-ghost whitespace-nowrap">
+                  <button className="btn btn-outline btn-xs md:btn-md  hover:bg-teal-800 hover:text-white btn-ghost whitespace-nowrap">
                     See More
                   </button>
                 </Link>
